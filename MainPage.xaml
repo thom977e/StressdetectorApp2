@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StressdetectorApp.MainPage"
+             BackgroundColor="#f0f0f5">
+
+
+    <VerticalStackLayout>
+
+        <!-- Header Section -->
+        <Grid Padding="20" BackgroundColor="#f0f0f5">
+            <!-- Samme grå farve som resten af siden -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+       
+
+        <Label Text="Oversigt" 
+                   Grid.Column="0"
+                   VerticalOptions="Start" 
+                   FontSize="Large" 
+                   FontAttributes="Bold"/>
+
+            <Button Text="Indstillinger" 
+                    Grid.Column="1"
+                    BackgroundColor="LightGray"
+                    CornerRadius="5"
+                    VerticalOptions="Start"
+                    Clicked="OnIndstillingerClicked" />
+        </Grid>
+
+        <Image Source="hjerte3.jpg.png"
+               HeightRequest="400"  
+                WidthRequest="400"
+            HorizontalOptions="Center"
+               VerticalOptions="Center"/>
+
+        <VerticalStackLayout HorizontalOptions="Center" Padding="50" Spacing="20">
+
+            <!-- Button for Health Data -->
+            <Button Text="Vis alle sundhedsdata"
+            BackgroundColor="LightGray"
+            TextColor="Black"
+            CornerRadius="10"
+            WidthRequest="400"
+            HeightRequest="70"
+            FontSize="Medium"
+            HorizontalOptions="Start"  
+            Margin="0, 0, 50, 0"
+            Clicked="VisSundhedsdataClicked" />
+
+
+            <!-- Button for Calendar -->
+                <Button Text="Kalender?"
+            BackgroundColor="LightGray"
+            TextColor="Black"
+            CornerRadius="10"
+            WidthRequest="400"
+            HeightRequest="70"
+            FontSize="Medium"
+            HorizontalOptions="Start"  
+                   Margin="0, 20, 50, 0"/>
+                    
+        </VerticalStackLayout>
+
+    </VerticalStackLayout>
+</ContentPage>

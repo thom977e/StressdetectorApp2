@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="StressdetectorApp.Sundhedsdata"
+             BackgroundColor="#f0f0f5">
+
+    <AbsoluteLayout>
+        <StackLayout Padding="10">
+            <Label Text="Personens Sundhedsdata" FontSize="20" HorizontalOptions="Center" />
+            <ListView x:Name="dataListView" ItemsSource="{Binding DataList}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Data}" Detail="{Binding Timestamp, StringFormat='{0:dd-MM-yyyy HH:mm:ss}'}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+
+
+        <!-- Analyserapport-knap -->
+        <Button Text="Analyserapport"
+                BackgroundColor="Purple"
+                TextColor="White"
+                Clicked="OnAnalyseButtonClicked"
+                AbsoluteLayout.LayoutBounds="0.05, 0.95, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+
+        <!-- Tilbage-knap -->
+        <Button Text="Tilbage"
+                BackgroundColor="Purple"
+                TextColor="White"
+                Clicked="OnTilbageButtonClicked"
+                AbsoluteLayout.LayoutBounds="0.95, 0.95, AutoSize, AutoSize"
+                AbsoluteLayout.LayoutFlags="PositionProportional"/>
+
+
+    </AbsoluteLayout>
+
+</ContentPage>
